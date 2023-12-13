@@ -12,7 +12,3 @@ CREATE TABLE IF NOT EXISTS us_admin (
     nombre VARCHAR(255) NOT NULL,
     perfil TINYINT NOT NULL
 );
-
--- Insertar admin
-INSERT INTO us_admin (correoUsuario, passwordHash, nombre, perfil) VALUES
-('root@gmail.com', SHA2('root', 256), 'root', 0);

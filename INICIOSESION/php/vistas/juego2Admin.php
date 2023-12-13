@@ -1,0 +1,1 @@
+<h1>Bienvenido al gestor de administración del juego 2</h1>

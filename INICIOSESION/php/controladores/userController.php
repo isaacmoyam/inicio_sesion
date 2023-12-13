@@ -35,7 +35,7 @@
         public function register() {
             if(isset($_POST["correo"]) && isset($_POST["contrasena"]) && isset($_POST["nombre"]) && isset($_POST["perfil"]) && !empty($_POST["correo"]) && !empty($_POST["contrasena"]) && !empty($_POST["nombre"]) && !empty($_POST["perfil"])) {
                 $correo = $_POST["correo"];
-                $contrasena = $_POST["contrasena"];
+                $contrasena = password_hash($_POST["contrasena"], PASSWORD_DEFAULT);
                 $nombre = $_POST["nombre"];
                 $perfil = $_POST["perfil"];
                 $this->obj->registrarUsuario($correo,$contrasena,$nombre,$perfil);
